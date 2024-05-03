@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentMethodActivity">
+
+    <LinearLayout
+        android:id="@+id/totalPaymentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total Payment"
+            android:gravity="start"
+            android:layout_marginStart="16dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Amount"
+            android:gravity="end"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/payWithinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/totalPaymentLayout"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pay within"
+            android:gravity="start"
+            android:layout_marginStart="16dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/countdownTimerTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_marginEnd="16dp"
+            />
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/qrCodeImage"
+        android:layout_height="600dp"
+        android:layout_width="match_parent"
+        android:contentDescription="qrcode"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save QR Code"
+        android:layout_below="@id/qrCodeImage"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveQRCodeToGallery"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
